@@ -1,0 +1,24 @@
+<nav class="menu">
+  <app-menu-item [menuFor]="main">Menu</app-menu-item>
+
+  <ng-template #main>
+    <app-menu>
+      <app-menu-item [menuFor]="item1">Item 1</app-menu-item>
+      <app-menu-item [menuFor]="item2">Item 2</app-menu-item>
+      <app-menu-item [menuFor]="item3">Item 3</app-menu-item>
+    </app-menu>
+  </ng-template>
+
+  <ng-template #item1>
+    <app-menu-item>Subitem1 1</app-menu-item>
+    <app-menu-item>Subitem1 2</app-menu-item>
+    <app-menu-item>Subitem1 3</app-menu-item>
+  </ng-template>
+  <ng-template #item2>
+    <app-menu-item>Subitem2 1</app-menu-item>
+    <app-menu-item>Subitem2 2</app-menu-item>
+  </ng-template>
+  <ng-template #item3>
+    <app-menu-item>Subitem3</app-menu-item>
+  </ng-template>
+</nav>
