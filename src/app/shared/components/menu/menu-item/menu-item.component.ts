@@ -2,6 +2,7 @@ import {
   Component,
   HostListener,
   Input,
+  Optional,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
@@ -27,7 +28,20 @@ export class MenuItemComponent {
     this.viewContainerRef.clear();
   }
 
+  constructor(@Optional() private parent: MenuComponent) {}
+
   private addTemplate(temp: TemplateRef<any>): void {
-    this.viewContainerRef.createEmbeddedView(temp);
+    if (temp) {
+      this.viewContainerRef.createEmbeddedView(temp);
+    }
+  }
+
+  public containerCssClass(): string {
+    return this.isRoot() ? 'menu-btn--root' : 'menu-btn--leaf';
+  }
+
+  private isRoot(): boolean {
+    console.log(this.parent);
+    return this.parent ? true : false;
   }
 }

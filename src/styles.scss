@@ -2,4 +2,26 @@
 .menu {
   display: flex;
   flex-direction: column;
+  // width: 155px;
+  margin-top: 20px;
+}
+
+.menu-btn {
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  max-width: 150px;
+  min-width: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgba(10, 113, 182, 0.445);
+}
+
+.menu-btn--root {
+  display: inline-block;
+}
+
+.menu-btn--leaf {
+  margin-left: 1px;
+  display: inline-block;
 }
