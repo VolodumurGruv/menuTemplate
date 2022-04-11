@@ -41,7 +41,6 @@ export class MenuItemComponent {
   }
 
   private isRoot(): boolean {
-    console.log(this.parent);
     return this.parent ? true : false;
   }
 }

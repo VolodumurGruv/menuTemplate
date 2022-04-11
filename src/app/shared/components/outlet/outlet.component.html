@@ -19,6 +19,7 @@
     <app-menu-item>Subitem2 2</app-menu-item>
   </ng-template>
   <ng-template #item3>
-    <app-menu-item>Subitem3</app-menu-item>
+    <app-menu-item (click)="websocket()">Websocket</app-menu-item>
+    <app-menu-item (click)="home()">Home</app-menu-item>
   </ng-template>
 </nav>
